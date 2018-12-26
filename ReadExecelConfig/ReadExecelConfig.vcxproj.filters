@@ -43,9 +43,6 @@
     <None Include="res\Icdtool.ico">
       <Filter>资源文件</Filter>
     </None>
-    <None Include="res\icon1.ico">
-      <Filter>资源文件</Filter>
-    </None>
     <None Include="res\MTS.ico">
       <Filter>资源文件</Filter>
     </None>
@@ -59,9 +56,6 @@
       <Filter>资源文件</Filter>
     </None>
     <None Include="res\Provider.ico">
-      <Filter>资源文件</Filter>
-    </None>
-    <None Include="res\801.jpg">
       <Filter>资源文件</Filter>
     </None>
     <None Include="res\801.bmp">
@@ -114,30 +108,6 @@
     <ClInclude Include="Dlg429.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\commonLib\GridCtrl\CellRange.h">
-      <Filter>grid</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\commonLib\GridCtrl\GridCell.h">
-      <Filter>grid</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\commonLib\GridCtrl\GridCellBase.h">
-      <Filter>grid</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\commonLib\GridCtrl\GridCtrl.h">
-      <Filter>grid</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\commonLib\GridCtrl\GridDropTarget.h">
-      <Filter>grid</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\commonLib\GridCtrl\InPlaceEdit.h">
-      <Filter>grid</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\commonLib\GridCtrl\MemDC_Grid.h">
-      <Filter>grid</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\commonLib\GridCtrl\TitleTip.h">
-      <Filter>grid</Filter>
-    </ClInclude>
     <ClInclude Include="Dlg1553.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -159,23 +129,11 @@
     <ClInclude Include="DlgSerial.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\commonLib\GridCtrl\NewCellTypes\GridCellCheck.h">
-      <Filter>grid</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\commonLib\GridCtrl\NewCellTypes\GridCellCombo.h">
-      <Filter>grid</Filter>
-    </ClInclude>
     <ClInclude Include="Execel_Serial.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\public\define_comm_protocol.h">
       <Filter>public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\commonLib\GridCtrl\GridCellButton.h">
-      <Filter>grid</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\commonLib\GridCtrl\gridcellLed.h">
-      <Filter>grid</Filter>
     </ClInclude>
     <ClInclude Include="DlgDiscrete.h">
       <Filter>头文件</Filter>
@@ -234,6 +192,42 @@
     <ClInclude Include="ProCommCtrl.h">
       <Filter>协议导入</Filter>
     </ClInclude>
+    <ClInclude Include="..\commonLib\GridCtrl\CellRange.h">
+      <Filter>grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\commonLib\GridCtrl\GridCell.h">
+      <Filter>grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\commonLib\GridCtrl\GridCellBase.h">
+      <Filter>grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\commonLib\GridCtrl\GridCellButton.h">
+      <Filter>grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\commonLib\GridCtrl\NewCellTypes\GridCellCheck.h">
+      <Filter>grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\commonLib\GridCtrl\NewCellTypes\GridCellCombo.h">
+      <Filter>grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\commonLib\GridCtrl\gridcellLed.h">
+      <Filter>grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\commonLib\GridCtrl\GridCtrl.h">
+      <Filter>grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\commonLib\GridCtrl\GridDropTarget.h">
+      <Filter>grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\commonLib\GridCtrl\InPlaceEdit.h">
+      <Filter>grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\commonLib\GridCtrl\MemDC_Grid.h">
+      <Filter>grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\commonLib\GridCtrl\TitleTip.h">
+      <Filter>grid</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ReadExecelConfig.cpp">
@@ -257,32 +251,11 @@
     <ClCompile Include="..\public\ManageDb.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\commonLib\function.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Execel_429.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Dlg429.cpp">
       <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\commonLib\GridCtrl\GridCell.cpp">
-      <Filter>grid</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\commonLib\GridCtrl\GridCellBase.cpp">
-      <Filter>grid</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\commonLib\GridCtrl\GridCtrl.cpp">
-      <Filter>grid</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\commonLib\GridCtrl\GridDropTarget.cpp">
-      <Filter>grid</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\commonLib\GridCtrl\InPlaceEdit.cpp">
-      <Filter>grid</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\commonLib\GridCtrl\TitleTip.cpp">
-      <Filter>grid</Filter>
     </ClCompile>
     <ClCompile Include="..\public\Markup.cpp">
       <Filter>源文件</Filter>
@@ -308,20 +281,8 @@
     <ClCompile Include="DlgSerial.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\commonLib\GridCtrl\NewCellTypes\GridCellCheck.cpp">
-      <Filter>grid</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\commonLib\GridCtrl\NewCellTypes\GridCellCombo.cpp">
-      <Filter>grid</Filter>
-    </ClCompile>
     <ClCompile Include="Execel_Serial.cpp">
       <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\commonLib\GridCtrl\GridCellButton.cpp">
-      <Filter>grid</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\commonLib\GridCtrl\gridcellLed.cpp">
-      <Filter>grid</Filter>
     </ClCompile>
     <ClCompile Include="DlgDiscrete.cpp">
       <Filter>源文件</Filter>
@@ -373,6 +334,39 @@
     </ClCompile>
     <ClCompile Include="ProCommCtrl.cpp">
       <Filter>协议导入</Filter>
+    </ClCompile>
+    <ClCompile Include="..\commonLib\GridCtrl\GridCell.cpp">
+      <Filter>grid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\commonLib\GridCtrl\GridCellBase.cpp">
+      <Filter>grid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\commonLib\GridCtrl\GridCellButton.cpp">
+      <Filter>grid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\commonLib\GridCtrl\NewCellTypes\GridCellCheck.cpp">
+      <Filter>grid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\commonLib\GridCtrl\NewCellTypes\GridCellCombo.cpp">
+      <Filter>grid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\commonLib\GridCtrl\gridcellLed.cpp">
+      <Filter>grid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\commonLib\GridCtrl\GridCtrl.cpp">
+      <Filter>grid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\commonLib\GridCtrl\GridDropTarget.cpp">
+      <Filter>grid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\commonLib\GridCtrl\InPlaceEdit.cpp">
+      <Filter>grid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\commonLib\GridCtrl\TitleTip.cpp">
+      <Filter>grid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\commonLib\function.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

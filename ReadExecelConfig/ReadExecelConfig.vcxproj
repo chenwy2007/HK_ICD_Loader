@@ -41,15 +41,17 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>../../commonLib/;../../commonLib/boost_1_57;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
-    <LibraryPath>../../commonLib/boost_1_57/stage/lib;../../commonLib/SkinUI/CxImage/libs/Debug;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
-    <OutDir>..\..\HK18007\$(Configuration)\</OutDir>
+    <IncludePath>../commonLib/;../commonLib/boost_1_57;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <LibraryPath>../commonLib/boost_1_57/stage/lib;../commonLib/SkinUI/CxImage/libs/Debug;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
+    <OutDir>../ICD_Tool/ICD_bin_debug</OutDir>
+    <TargetName>HK_ICD_Loader_d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>../../commonLib;../../commonLib\boost_1_57;$(IncludePath)</IncludePath>
-    <LibraryPath>../../commonLib\boost_1_57\stage\lib;../../commonLib\SkinUI\CxImage\libs\Release;$(LibraryPath)</LibraryPath>
-    <OutDir>..\..\HK18007\$(Configuration)\</OutDir>
+    <IncludePath>../commonLib;../commonLib\boost_1_57;$(IncludePath)</IncludePath>
+    <LibraryPath>../commonLib\boost_1_57\stage\lib;../commonLib\SkinUI\CxImage\libs\Release;$(LibraryPath)</LibraryPath>
+    <OutDir>../ICD_Tool/ICD_bin</OutDir>
+    <TargetName>HK_ICD_Loader</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -106,12 +108,10 @@
   <ItemGroup>
     <None Include="ReadMe.txt" />
     <None Include="res\801.bmp" />
-    <None Include="res\801.jpg" />
     <None Include="res\bk.bmp" />
     <None Include="res\COMPUTER.ICO" />
     <None Include="res\gf.bmp" />
     <None Include="res\Icdtool.ico" />
-    <None Include="res\icon1.ico" />
     <None Include="res\MTS.ico" />
     <None Include="res\MYSL.ICO" />
     <None Include="res\Provider.ico" />
@@ -123,18 +123,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\commonLib\function.h" />
-    <ClInclude Include="..\..\commonLib\GridCtrl\CellRange.h" />
-    <ClInclude Include="..\..\commonLib\GridCtrl\GridCell.h" />
-    <ClInclude Include="..\..\commonLib\GridCtrl\GridCellBase.h" />
-    <ClInclude Include="..\..\commonLib\GridCtrl\GridCellButton.h" />
-    <ClInclude Include="..\..\commonLib\GridCtrl\gridcellLed.h" />
-    <ClInclude Include="..\..\commonLib\GridCtrl\GridCtrl.h" />
-    <ClInclude Include="..\..\commonLib\GridCtrl\GridDropTarget.h" />
-    <ClInclude Include="..\..\commonLib\GridCtrl\InPlaceEdit.h" />
-    <ClInclude Include="..\..\commonLib\GridCtrl\MemDC_Grid.h" />
-    <ClInclude Include="..\..\commonLib\GridCtrl\NewCellTypes\GridCellCheck.h" />
-    <ClInclude Include="..\..\commonLib\GridCtrl\NewCellTypes\GridCellCombo.h" />
-    <ClInclude Include="..\..\commonLib\GridCtrl\TitleTip.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\CellRange.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\GridCell.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\GridCellBase.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\GridCellButton.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\gridcellLed.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\GridCtrl.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\GridDropTarget.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\InPlaceEdit.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\MemDC_Grid.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\NewCellTypes\GridCellCheck.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\NewCellTypes\GridCellCombo.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\TitleTip.h" />
     <ClInclude Include="..\public\CppSQLite3.h" />
     <ClInclude Include="..\public\define_comm_protocol.h" />
     <ClInclude Include="..\public\ManageDb.h" />
@@ -177,17 +177,17 @@
     <ClInclude Include="XReadConfig.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\commonLib\function.cpp" />
-    <ClCompile Include="..\..\commonLib\GridCtrl\GridCell.cpp" />
-    <ClCompile Include="..\..\commonLib\GridCtrl\GridCellBase.cpp" />
-    <ClCompile Include="..\..\commonLib\GridCtrl\GridCellButton.cpp" />
-    <ClCompile Include="..\..\commonLib\GridCtrl\gridcellLed.cpp" />
-    <ClCompile Include="..\..\commonLib\GridCtrl\GridCtrl.cpp" />
-    <ClCompile Include="..\..\commonLib\GridCtrl\GridDropTarget.cpp" />
-    <ClCompile Include="..\..\commonLib\GridCtrl\InPlaceEdit.cpp" />
-    <ClCompile Include="..\..\commonLib\GridCtrl\NewCellTypes\GridCellCheck.cpp" />
-    <ClCompile Include="..\..\commonLib\GridCtrl\NewCellTypes\GridCellCombo.cpp" />
-    <ClCompile Include="..\..\commonLib\GridCtrl\TitleTip.cpp" />
+    <ClCompile Include="..\commonLib\function.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\GridCell.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\GridCellBase.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\GridCellButton.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\gridcellLed.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\GridCtrl.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\GridDropTarget.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\InPlaceEdit.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\NewCellTypes\GridCellCheck.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\NewCellTypes\GridCellCombo.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\TitleTip.cpp" />
     <ClCompile Include="..\public\CppSQLite3.cpp" />
     <ClCompile Include="..\public\ManageDb.cpp" />
     <ClCompile Include="..\public\Markup.cpp" />

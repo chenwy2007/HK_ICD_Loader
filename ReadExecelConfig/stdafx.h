@@ -95,9 +95,9 @@ using namespace std;
 
 #include "XProtocol_Funtion.h"
 #ifdef _DEBUG
-#pragma comment (lib, "../debug/sqlite3.lib") 
+#pragma comment (lib, "../ICD_Tool/ICD_bin_debug/sqlite3.lib") 
 #else
-#pragma comment (lib, "../release/sqlite3.lib")
+#pragma comment (lib, "../ICD_Tool/ICD_bin_release/sqlite3.lib")
 #endif
 //void SetGirdItemText(CGridCtrl &grid,int nRow,int nCol,CString stTxt);
 

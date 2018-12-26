@@ -2,7 +2,7 @@
 #include "../public/Wnd/BaseDialog.h"
 #include "../public/Wnd/ColorButton.h"
 #include "afxwin.h"
-#include "g:\non-standardteq-hk\trunk\commonlib\gridctrl\gridctrl.h"
+#include "../commonlib/gridctrl/gridctrl.h"
 
 
 
