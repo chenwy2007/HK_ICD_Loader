@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3B234CF7-8DCF-4B46-A6D9-762C68C964FE}</ProjectGuid>
+    <RootNamespace>HK_ICD_Loader</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <ProjectName>HK_ICD_Loader</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>../commonLib/;../commonLib/boost_1_57;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <LibraryPath>../commonLib/boost_1_57/stage/lib;../commonLib/SkinUI/CxImage/libs/Debug;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
+    <OutDir>../ICD_Tool/ICD_bin_debug/</OutDir>
+    <TargetName>HK_ICD_Loader_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>../commonLib;../commonLib\boost_1_57;$(IncludePath)</IncludePath>
+    <LibraryPath>../commonLib\boost_1_57\stage\lib;../commonLib\SkinUI\CxImage\libs\Release;$(LibraryPath)</LibraryPath>
+    <OutDir>../ICD_Tool/ICD_bin_release/</OutDir>
+    <TargetName>HK_ICD_Loader</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>htmlhelp.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>htmlhelp.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\801.bmp" />
+    <None Include="res\bk.bmp" />
+    <None Include="res\COMPUTER.ICO" />
+    <None Include="res\gf.bmp" />
+    <None Include="res\Icdtool.ico" />
+    <None Include="res\MTS.ico" />
+    <None Include="res\MYSL.ICO" />
+    <None Include="res\Provider.ico" />
+    <None Include="res\HK_ICD_Loader.ico" />
+    <None Include="res\HK_ICD_Loader.rc2" />
+    <None Include="res\Save.ico" />
+    <None Include="res\tba__256.bmp" />
+    <None Include="res\toolbar1.bmp" />
+    <None Include="tttt.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\commonLib\function.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\CellRange.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\GridCell.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\GridCellBase.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\GridCellButton.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\gridcellLed.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\GridCtrl.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\GridDropTarget.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\InPlaceEdit.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\MemDC_Grid.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\NewCellTypes\GridCellCheck.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\NewCellTypes\GridCellCombo.h" />
+    <ClInclude Include="..\commonLib\GridCtrl\TitleTip.h" />
+    <ClInclude Include="..\public\CppSQLite3.h" />
+    <ClInclude Include="..\public\define_comm_protocol.h" />
+    <ClInclude Include="..\public\ManageDb.h" />
+    <ClInclude Include="..\public\Markup.h" />
+    <ClInclude Include="..\public\Wnd\BaseDialog.h" />
+    <ClInclude Include="..\public\Wnd\ColorButton.h" />
+    <ClInclude Include="..\public\Wnd\OwnerDrawTabCtrl.h" />
+    <ClInclude Include="CTreeCtrlX.h" />
+    <ClInclude Include="Dlg1553.h" />
+    <ClInclude Include="Dlg429.h" />
+    <ClInclude Include="DlgCANProtocol.h" />
+    <ClInclude Include="DlgCommProMain.h" />
+    <ClInclude Include="DlgDBProtocolICD.h" />
+    <ClInclude Include="DlgDiscrete.h" />
+    <ClInclude Include="DlgLoadIcdFile.h" />
+    <ClInclude Include="DlgMain.h" />
+    <ClInclude Include="DlgProgress.h" />
+    <ClInclude Include="DlgSerial.h" />
+    <ClInclude Include="DlgStart.h" />
+    <ClInclude Include="excel9.h" />
+    <ClInclude Include="Execel_1553.h" />
+    <ClInclude Include="Execel_429.h" />
+    <ClInclude Include="Execel_Base.h" />
+    <ClInclude Include="Execel_Serial.h" />
+    <ClInclude Include="MyToolBar.h" />
+    <ClInclude Include="Pro1553B.h" />
+    <ClInclude Include="ProArinc429.h" />
+    <ClInclude Include="ProCAN.h" />
+    <ClInclude Include="ProCommCtrl.h" />
+    <ClInclude Include="ProDataType.h" />
+    <ClInclude Include="ProDiscrete.h" />
+    <ClInclude Include="ProSerial.h" />
+    <ClInclude Include="ProtocolDefine.h" />
+    <ClInclude Include="ReadExecelConfig.h" />
+    <ClInclude Include="ReadExecelConfigDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="XProtocol_Funtion.h" />
+    <ClInclude Include="XReadConfig.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\commonLib\function.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\GridCell.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\GridCellBase.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\GridCellButton.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\gridcellLed.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\GridCtrl.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\GridDropTarget.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\InPlaceEdit.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\NewCellTypes\GridCellCheck.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\NewCellTypes\GridCellCombo.cpp" />
+    <ClCompile Include="..\commonLib\GridCtrl\TitleTip.cpp" />
+    <ClCompile Include="..\public\CppSQLite3.cpp" />
+    <ClCompile Include="..\public\ManageDb.cpp" />
+    <ClCompile Include="..\public\Markup.cpp" />
+    <ClCompile Include="..\public\Wnd\BaseDialog.cpp" />
+    <ClCompile Include="..\public\Wnd\ColorButton.cpp" />
+    <ClCompile Include="..\public\Wnd\OwnerDrawTabCtrl.cpp" />
+    <ClCompile Include="CTreeCtrlX.cpp" />
+    <ClCompile Include="Dlg1553.cpp" />
+    <ClCompile Include="Dlg429.cpp" />
+    <ClCompile Include="DlgCANProtocol.cpp" />
+    <ClCompile Include="DlgCommProMain.cpp" />
+    <ClCompile Include="DlgDBProtocolICD.cpp" />
+    <ClCompile Include="DlgDiscrete.cpp" />
+    <ClCompile Include="DlgLoadIcdFile.cpp" />
+    <ClCompile Include="DlgMain.cpp" />
+    <ClCompile Include="DlgProgress.cpp" />
+    <ClCompile Include="DlgSerial.cpp" />
+    <ClCompile Include="DlgStart.cpp" />
+    <ClCompile Include="excel9.cpp" />
+    <ClCompile Include="Execel_1553.cpp" />
+    <ClCompile Include="Execel_429.cpp" />
+    <ClCompile Include="Execel_Base.cpp" />
+    <ClCompile Include="Execel_Serial.cpp" />
+    <ClCompile Include="MyToolBar.cpp" />
+    <ClCompile Include="Pro1553B.cpp" />
+    <ClCompile Include="ProArinc429.cpp" />
+    <ClCompile Include="ProCAN.cpp" />
+    <ClCompile Include="ProCommCtrl.cpp" />
+    <ClCompile Include="ProDiscrete.cpp" />
+    <ClCompile Include="ProSerial.cpp" />
+    <ClCompile Include="ReadExecelConfig.cpp" />
+    <ClCompile Include="ReadExecelConfigDlg.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="XProtocol_Funtion.cpp" />
+    <ClCompile Include="XReadConfig.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="HK_ICD_Loader.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="HK_ICD_Loader.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
