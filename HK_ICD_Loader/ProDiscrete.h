@@ -63,6 +63,7 @@ protected:
 	vector<vector<string>> m_vtTemp3;
 
 private:
+	map<long, CString> m_mSystemName;
 
 
 

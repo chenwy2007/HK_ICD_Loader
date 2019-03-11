@@ -1097,7 +1097,7 @@ void Pro1553B::DeleteBLOCKFromDB(TREEDATA& TreeNode)
 					}
 				}
 			}
-			else if(sItemType == "DATA")
+			else if(sItemType == "DATA" || sItemType == "SBID")
 			{
 				if(!sGroupId.IsEmpty())
 					sSubName = sName+"."+sGroupId+"."+sTxt;
@@ -1347,7 +1347,7 @@ void Pro1553B::SaveDataToDB(TREEDATA& TreeData, int nCurDrive)
 						GetDataAttr(xmlChild,TreeData.subNode[i-1],nIdx,sProtocolRecSend,sItemNo,sItemName,sProtocolName,m_nProtocolId);
 						++ nIdx;
 					}
-					else if(sItemType == "DATA" && sItemName != "")
+					else if((sItemType == "DATA" || sItemType == "SBID") && sItemName != "")
 					{
 						//构建共享内存ID
 						int nItemLen = _tstoi(sItemLength);

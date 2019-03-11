@@ -26,6 +26,8 @@ ProDiscrete::ProDiscrete()
 	m_vtTemp1.clear();
 	m_vtTemp2.clear();
 	m_vtTemp3.clear();
+
+	m_mSystemName.clear();
 }
 
 ProDiscrete::~ProDiscrete()
@@ -68,6 +70,10 @@ TREEDATA& ProDiscrete::BuildProtocolTree(TREEDATA& ParentTree,int nProType,int n
 	}
 
 	m_nDlgId = nDlgId;
+
+	// 存入当前的系统名称和ID对应关系
+	if(m_protocoNameVec.size() > 0)
+		m_mSystemName[nDlgId] = m_protocoNameVec[0];
 
 	// 获得目录页数据（该页记录所有的协议块）
 	TREEDATA TreeItem;
@@ -401,7 +407,9 @@ void ProDiscrete::SaveDataToDB(TREEDATA& TreeData, int nCurDrive)
 		return;
 
 	m_nDlgId = TreeData.nDlgId;
-	CString sPageName = m_protocoNameVec[0];
+	// 解决同时存入多个系统时，系统名会出错的bug
+	//CString sPageName = m_protocoNameVec[0];
+	CString sPageName = m_mSystemName[m_nDlgId];
 
 	int nBlockNum = TreeData.subNode.size();
 	for(int i = 0; i < nBlockNum; ++ i)
