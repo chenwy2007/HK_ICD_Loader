@@ -69,6 +69,8 @@
 #define  XML_CANID				"CANID"			//CANID就是CAN邮箱标识
 #define  XML_MaskLen			"MaskLen"		//标识符长度
 #define  XML_BaudRate			"BaudRate"		//波特率
+#define  XML_BUSTYPE			"BusType"		//总线类型A或B
+#define  XML_BLOGICID			"BLogicId"		//逻辑块号
 // 协议控件属性
 #define  XML_CTRL_BTYPE			"CTRLBTYPE"		//块类型
 #define  XML_CTRL_DType			"CTRLDTYPE"		//控件显示类型

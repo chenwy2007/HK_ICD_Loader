@@ -1225,9 +1225,15 @@ void Pro1553B::SaveDataToDB(TREEDATA& TreeData, int nCurDrive)
 			sTxt = vtItem[6][5].c_str();
 			sTxt.Trim("ms");// 去掉ms
 			xml.AddAttrib(XML_RefreshTime,sTxt);
+			// 总线类型
+			sTxt = vtItem[9][5].c_str();
+			xml.AddAttrib(XML_BUSTYPE,sTxt);
 			//校验方式
 			sTxt = vtItem[11][5].c_str();
 			xml.AddAttrib(XML_CheckMode,sTxt);
+			// 逻辑块号
+			sTxt = vtItem[12][5].c_str();
+			xml.AddAttrib(XML_BLOGICID,sTxt);
 			//数据单位
 			CString sDataUnit = vtItem[2][5].c_str();
 			xml.AddAttrib(XML_DataUnit,sDataUnit);
